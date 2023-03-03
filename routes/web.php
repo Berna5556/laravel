@@ -17,10 +17,25 @@ Route::get('/', function () {
     return view('Producto.welcome');
 });
 
-Route::get('/producto', function () {
+function index()
+{
     return view('Producto.index');
+}
+
+function create()
+{
+    return view('Producto.create');
+}
+
+Route::get('/index', function () {
+    return index();
 });
 
-Route::get('/producto/create', function () {
-    return view('Producto.create');
-}); 
+Route::get('/create', function() {
+    return create();
+});
+
+function edit()
+{
+    return view('Producto.edit');
+}
